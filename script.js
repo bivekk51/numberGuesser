@@ -23,26 +23,30 @@ function setNumber(){
 
 function gameLogic(){
     let userChoice=document.getElementById("input").value;
+    const message=document.getElementById("message")
     if(compCHoice!==userChoice){
         initialTries--;
         if(compCHoice>userChoice){
-            document.write(`Higher than ${userChoice}`)
+            message.innerHTML=`Higher than ${userChoice}`
             
         }
         else if((compCHoice<userChoice)){
-            document.write(`Lower than ${userChoice} `)
+            message.innerHTML=`Lower than ${userChoice} `
         }
         score.innerHTML=`Tries Remaining: ${initialTries}`;
         checkForLoss();
     }
     else if(compCHoice===userChoice){
-        document.write(`Congrats, you have guessed the number in ${usedTries}`)
+        message.innerHTML=`Congrats, you have guessed the number in ${usedTries}`
     }
 }
 
 function checkForLoss(){
     if(initialTries==0)
     {
-        document.write
+        message.innerHTML='Tries Over You lost'
+        document.getElementById("input").disabled = true;
+        document.getElementById("btn").disabled = true;
     }
 }
+
