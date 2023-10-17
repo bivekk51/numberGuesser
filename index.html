@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="select-level">
-        <button onclick="setLevel(1)">Easy</button>
-        <button onclick="setLevel(2)">Medium</button>
-        <button onclick="setLevel(3)">Hard</button>
-        <div class="game">
+    <div class="container">
+         <button onclick="setLevel(1)" id="level" >Easy</button>
+        <button onclick="setLevel(2)" id="level">Medium</button>
+        <button onclick="setLevel(3)" id="level">Hard</button> 
+        <div id="game-container">
             <p id="tries"> </p>
             <div class="input">
                 <input type="number" id="input">
-                <button onclick="checkNumber()">Submit</button>
+                <button onclick="checkNumber()" class="btn">Submit</button>
             </div>
             <p id="message"></p>
         </div>
