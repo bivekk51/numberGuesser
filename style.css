@@ -1,3 +1,6 @@
 #game-container {
     display: none;
 }
+#reset-btn{
+    display:none;
+}
