@@ -4,6 +4,9 @@ let initialTries=10;
 let butt=document.getElementById("btn");
 let score=document.getElementById("tries");
 let resetBtn=document.getElementById("reset-btn");
+let hints=document.getElementById("aboutgame");
+let hintbttn=document.getElementById("hint");
+let hidebttn=document.getElementById("hide");
 setBoard();
 function setBoard(){
 
@@ -43,9 +46,9 @@ function handleEnterKey(event) {
   }
   document.getElementById("input").addEventListener("keydown", handleEnterKey);
 
-//checking the numbers
-
-function checkNumber(){
+function checkNumber(){
+    
+    
     let userChoice=parseInt(document.getElementById("input").value);
     let message=document.getElementById("message")
     usedTries++;
@@ -93,3 +96,14 @@ function checkForLoss(){
     }
 }
 
+function showHints(){
+  hints.style.display="inline";
+  hintbttn.style.display="none";
+  hidebttn.style.display="inline"
+};
+
+function hideHints(){
+  hints.style.display="none";
+  hidebttn.style.display="none"
+  hintbttn.style.display="inline";
+}
