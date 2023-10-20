@@ -11,6 +11,15 @@
          <button onclick="setLevel(1)" id="level" >Easy</button>
         <button onclick="setLevel(2)" id="level">Medium</button>
         <button onclick="setLevel(3)" id="level">Hard</button> 
+        <button onclick="showHints()" id="hint"> Need help?</button>
+        <button onclick="hideHints()" id="hide"> Hide-hints</button>
+        <div id="aboutgame">
+            Welcome to Number Guesser game<br>
+            Input/Guess a number from 1-100<br> and you'll get hints eventually<br> 
+            Easy Level - 10 tries<br>
+            Medium Level - 5 tries<br>
+            Hard Level - 3 tries<br>
+        </div>
         <div id="game-container">
             <p id="tries"> </p>
             <div class="input">
