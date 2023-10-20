@@ -43,9 +43,9 @@ function handleEnterKey(event) {
   }
   document.getElementById("input").addEventListener("keydown", handleEnterKey);
 
-function checkNumber(){
-    
-    
+//checking the numbers
+
+function checkNumber(){
     let userChoice=parseInt(document.getElementById("input").value);
     let message=document.getElementById("message")
     usedTries++;
